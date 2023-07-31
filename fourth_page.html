@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đọc tiếp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link href="css/header_menu.css" rel="stylesheet">
+    <link href="fourth_page.css" rel="stylesheet">
+</head>
+<body>
+
+        <nav>
+            <ul class="nav">
+                <li>  
+                    <a href="index.html">  <i class="fa-solid fa-house fa-xl"></i> </a> 
+                </li>  
+                <li>  
+                    <a href="#">  <i class="fa-solid fa-bars"></i> Thể loại</a>
+                    <ul class="dropdown" id="type_dropdown" >
+                        <li><a href="#"  class="submenu">Tất cả</a></li>
+                        <li><a href="#"  class="submenu">Huyền Huyễn</a></li>  
+                        <li><a href="#"  class="submenu">Khoa Huyễn </a></li>
+                        <li><a href="#"  class="submenu">Võng Du</a></li>
+                        <li><a href="#"  class="submenu">Đồng nhân</a></li>
+                    </ul>
+                </li>  
+
+                <li><a href="#">Bảng xếp hạng</a> 
+                    <ul class="dropdown" >
+                        <li><a href="#"  class="submenu">Thịnh hành</a></li>
+                        <li><a href="#"  class="submenu">Đọc nhiều</a></li>
+                        <li><a href="#"  class="submenu">Tặng thưởng</a></li>
+                        <li><a href="#"  class="submenu">Đề cử</a></li>
+                        <li><a href="#"  class="submenu">Yêu thích</a></li>
+                        <li><a href="#"  class="submenu">Thảo luận</a></li>
+                       
+                    </ul>
+                </li> 
+                
+                <li class="search">
+                    <div>
+                        <form >
+                            <input type="text"
+                                placeholder="Tìm truyện"
+                                name="search">
+                        </form>
+                    </div>
+                </li>
+
+                <li><a href="#" class="menu"  >Đăng Truyện</a></li>  
+
+                <li><a href="#" class="menu" id="login">Đăng Nhập</a></li>
+
+                <li><a href="#" class="menu" id="register">Đăng Ký</a></li>  
+
+            </ul>
+        </nav>   
+      
+    <div class="modal_login hide">
+        <div class="form_login">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="modal__inner_login">
+                <div class="modal__header_login">
+                    <P>Đăng nhập</P>
+                </div>
+                <div class="modal__body_login">
+                    <div class="header_form_login">
+                        <p>Email</p>
+                        <a>Gửi lại email kích hoạt</a>
+                    </div>
+
+                    <input type="text" placeholder="Nhập email" name="email" required>
+                
+                    <div class="header_form_login">
+                        <p>Mật khẩu</p>
+                        <a>Quên mật khẩu ?</a>
+                    </div>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+<!-- 
+                    <input type="checkbox">Ghi nhớ mật khẩu -->
+                    <label class="container">Ghi nhớ mật khẩu
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                </div>
+                <div class="modal_footer_login">
+                    <button>Đăng nhập</button>
+                    <p>Bạn chưa có tài khoản? <a id="Reg">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_register hide">
+        <div class="form_register">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="modal__inner_register">
+                <div class="modal__header_register">
+                    <P>Đăng ký</P>
+                </div>
+                <div class="modal__body_register">
+                    <div class="header_form_register">
+                        <p>Email</p>
+                    </div>
+                    <input type="text" placeholder="Nhập email" name="email" required>
+                
+                    <div class="header_form_register">
+                        <p>Mật khẩu</p>
+                    </div>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+                    <div class="header_form_register">
+                        <p>Mật khẩu</p>
+                    </div>
+                    <input type="password" placeholder="Nhập lại mật khẩu" name="rpsw" required>
+                </div>
+                <div class="modal_footer_register">
+                    <button>Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="title_story">
+            <a class="image_story" href="#"><span><img src="img/hinh5.png"> </span></a>
+            <div class="infor_content">
+                <a class="Title_content">Trường Sinh Từ Tông Môn Tạp Dịch Bắt Đầu </a>
+                <a class="nameauthor_content"> Tác giả: Phi Tiên Ngư</a>
+            </div>
+        </div>
+        <main>
+            <div class="detail_content">
+                <div class="left-content"> 
+                    <div class="header_content">
+                        <div class="infor_story">
+                            <ul>
+                                <li><a class="number">239</a><a>Chương</a></li>
+                                <li><a class="number">12</a><a>Chương/tuần</a></li>
+                                <li><a class="number">239k</a><a>Lượt đọc</a></li>
+                                <li><a class="number">615</a><a>Cất giữ</a></li>
+                            </ul>
+                        </div>
+     
+                        <div class="rating_bar">
+                            <span class="fa fa-star checked" style="color: #ffeb0a;"></span>
+                            <span class="fa fa-star checked" style="color: #ffeb0a;"></span>
+                            <span class="fa fa-star checked" style="color: #ffeb0a;"></span>
+                            <span class="fa fa-star checked" style="color: #ffeb0a;"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="heading">4/5 (10 Đánh giá)</span>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="nav_page_redirect">
+                        <a class="nav-pre-page" href="#">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Chương trước</span>
+                        </a>
+                        <a class="nav-next-page" href="#">
+                            <span>Chương sau</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="main_content_right">
+                        <h1>Chương 01: Dưỡng Mệnh Chú Tiên Quyết</h1>
+                        
+                        <div class="list_infor">
+                            <p><i class="fa-solid fa-book"></i>Trường Sinh Từ Tông Môn Tạp Dịch Bắt Đầu</p>
+                            <p><i class="fa-solid fa-t"></i> 2105 chữ</p>
+                            <p><i class="fa-regular fa-clock"></i>2023-07-12 16:34:25</p>
+                        </div>
+
+
+                        <div class="article"> 
+                            Đại Lê Vương Triều, Huyền Dương Tông.
+                            <br><br>
+                            Nhập tông khảo hạch cửa ải cuối cùng —— Sấm Linh Đài.
+                            <br><br>
+                            Một đạo tràn ngập màu lam hồ quang điện bậc thang phía dưới, một cái tựa như chết đi thiếu niên, cánh tay bỗng nhiên co quắp một chút.
+                            <br><br>
+                            Hắn chậm rãi tỉnh lại, chống lên thân thể, nghiêng dựa vào trên bậc thang, mở mắt ra, hơi có vẻ mê mang đánh giá hoàn cảnh chung quanh.
+                            <br><br>
+                            Ta không phải chết sao? Đây là địa phương nào. . .
+                            <br><br>
+                            Không đợi Lý An quá nhiều suy nghĩ, trong đầu hiện lên tin tức đã như dòng lũ đánh tới, để hắn cảm thấy một trận thống khổ cùng mê muội.
+                            <br><br>
+                            Còn bên cạnh cách đó không xa, Huyền Dương Tông mấy người đệ tử, ngay tại chỉ trỏ.
+                            <br><br>"A? Hắn thế mà không có chết đi?"
+                            <br><br>"Xông vào Lôi Linh đại đạo, còn có thể sống sót, cũng là xem như cái kỳ tích. . . Đáng tiếc hắn linh căn bị Lôi Linh khí gây thương tích, đời này khó đạp tiên đồ."<br><br>"Từ phía trước đo đạo tâm đến xem, kẻ này tâm chí kiên định, cửa ải cuối cùng lại là tham, lại muốn xông qua chưa hề có người đi qua Lôi Linh đại đạo. . ."<br><br>Trên bậc thang, Lý An trong đầu cảm giác đau rốt cục lắng lại xuống dưới, trong mắt hiển hiện một tia phức tạp.<br><br>"Xung kích Nguyên Anh chưa thành, không nghĩ tới, ta thế mà trùng sinh! . . ."<br><br>Kiếp trước, hắn từ Địa Cầu xuyên qua đến tu tiên thế giới, mặc dù cũng không trong truyền thuyết kim thủ chỉ, nhưng lại vận khí không tệ, xuyên qua đến một cái cường đại tu tiên trong gia tộc.<br><br>Thông qua không ngừng cố gắng, rốt cục kết thành Chân Đan.<br><br>Nhưng chưa từng nghĩ, cái này liền đã là cực hạn của hắn, Lý An tại Kết Đan kỳ dừng lại chính là mấy trăm năm, thọ nguyên hao hết.<br><br>Vì tiến thêm một bước, Lý An tiến vào cái nào đó bí cảnh, thăm dò cơ duyên, lại vẫn lạc trong đó.<br><br>Không nghĩ tới lại trùng sinh tại đây.<br><br>Đại Lê Vương Triều. . . Không biết là cái nào biên giới xó xỉnh bên trong vương triều, Lý An cũng không rõ ràng, Tu Tiên Giới quá mức rộng lớn.<br><br>Hắn xem xét hạ tự thân tình huống, không nhịn được cười khổ lên.<br><br>"Hoàng giai đê phẩm không thuộc tính linh căn, so ta ở kiếp trước kém quá nhiều. . ."<br><br>Ở kiếp trước, Lý An chính là Hoàng giai thượng phẩm linh căn!<br><br>Nhưng dù là như thế, hắn tu hành đều là vô cùng gian nan, Kết Đan đã là cực hạn.<br><br>Lý An biết rõ, linh căn càng mạnh, tu luyện liền càng nhẹ nhõm.<br><br>Tại tu tiên một đường, đầu tiên xem thiên phú, tiếp theo nhìn tài nguyên.<br><br>Thiên phú làm gốc, tài nguyên làm phụ.<br><br>Đáng tiếc, làm người hai đời, đều không có trở thành có được tuyệt hảo tu luyện căn cốt may mắn.<br><br>Một thế này tư chất còn càng kém, càng thêm bình thường phổ thông, còn không có bối cảnh chèo chống. . . Trúc Cơ đều là vọng tưởng.<br><br>"May mắn, Dưỡng Mệnh Chú Tiên Quyết còn tại!"<br><br>Trong đầu hắn quét một chút, có chút thở dài một hơi.<br><br>Dưỡng Mệnh Chú Tiên Quyết, chính là Lý An vẫn lạc trước, từ cái kia bí cảnh ở bên trong lấy được bí thuật!<br><br>"Dưỡng Mệnh Chú Tiên Quyết, có thể gia tăng tu giả thọ nguyên, cái này ưu thế, có lẽ có thể để cho ta lấy lần này hạ chi tư, dòm nhìn đại đạo. . ."<br><br>Lý An trong lòng nói nhỏ.<br><br>Kiếp trước lúc tuổi già thời điểm, hắn từng quay đầu cả đời, xung kích Nguyên Anh không thành, nguyên nhân rất nhiều.<br><br>Thứ nhất, tham niệm hồng trần, tu đạo có thành tựu về sau, hắn lấy thê thiếp vô số, hưởng hết thế gian vinh hoa, lãng phí rất nhiều thời gian, cũng tăng thêm rất nhiều bụi nghiệt.<br><br>Thứ hai, tham dũng đấu hung ác, cùng người tranh đấu chém giết quá nhiều, dẫn đến thân thể ám thương tích lũy, linh căn tổn thương.<br><br>Cái thứ ba căn do, cũng là trọng yếu nhất: Tuổi thọ quá ngắn.<br><br>Nếu như hắn tại Kết Đan thời điểm, như lại có thể có ba trăm tuổi thọ mệnh, liền có thể mười phần chắc chín. . .<br><br>Dù sao, tư chất không được người bình thường, muốn đạt tới cùng thiên tài hạng người đồng dạng cấp độ, chỉ có thể hao phí nhiều thời gian hơn.<br><br>"Này cả đời tư chất càng kém, chỉ có kiên định tu đạo chi tâm, không luyến hồng trần, không phải vạn bất đắc dĩ, tuyệt không cùng người tranh đấu."<br><br>"Như thế, lại bằng vào Dưỡng Mệnh Chú Tiên Quyết vững vàng tu hành, liền hổ thẹn nhìn đại đạo khả năng!"<br><br>Tâm hắn niệm đã định.<br><br>"Lý An, ngươi tốt đi một chút mà sao? Còn có thể đứng lên sao?"<br><br>Mà giờ khắc này, một đạo thanh âm lo lắng truyền đến.<br><br>Theo âm thanh nhìn lại, cách đó không xa, một cái khác đầu tràn đầy ánh lửa đại đạo trên bậc thang, một cái con cháu nhà Nông bộ dáng thanh niên, chính quan tâm nhìn xem Lý An.<br><br>Hắn hình thể rất cường tráng, khuôn mặt đen nhánh mà thuần phác, giờ phút này bởi vì hỏa diễm thiêu đốt, đầu đầy mồ hôi.<br><br>Vương Đại Trụ, cùng Lý An cùng đi Huyền Dương Tông tham gia nhập tông tuyển chọn người.<br><br>Lý An bọn hắn cái này một nhóm, đều là Đại Lê Vương Triều Thiên Dương Quận tiến cử tới "Mầm Tiên", có gia tộc quyền thế công tử, tiểu thư khuê các, cũng có Lý An cùng Vương Đại Trụ dạng này tầng dưới chót lạnh thứ.<br><br>Bởi vì xuất thân gần, cho nên Vương Đại Trụ cùng Lý An quan hệ cũng tương đối tốt.<br><br>Ngoại trừ Vương Đại Trụ bên ngoài, cùng một đám mầm Tiên bên trong, cũng có mấy người, thông quan sau khi tại phân tâm chú ý Lý An bên này.<br><br>"Thế mà không chết. . ."<br><br>Triệu Tiên Truyền, Thiên Dương Quận tu tiên đại tộc Triệu gia tử đệ, mặc áo gấm, giờ phút này nhíu mày.<br><br>Hắn chính là Thủy thuộc tính linh căn, Hoàng giai đê phẩm, phẩm cấp giống như Lý An.<br><br>Nhưng Lý An linh căn nhưng không có thuộc tính, có thể tu các hệ chi pháp, mơ hồ cao hơn hắn ra nửa cách.<br><br>Tại đo đạo tâm thời điểm, người này thậm chí cùng mình không phân sàn sàn nhau, nếu để cho Lý An xông qua Lôi Linh quan, hắn liền không đuổi kịp.<br><br>Đồng thời, Triệu Tiên Truyền vô ý thức nhìn về phía mặt khác hai cái phương hướng.<br><br>Mộc linh quan bên kia, một cái một thân áo xanh thiếu nữ, đã nhanh muốn thông quan, Mộc Thanh Uyển, Hoàng giai trung phẩm Mộc Linh Căn!<br><br>Đồng dạng, Hỏa linh quan, Vương Đại Trụ phía trước, nhất dẫn trước, thì là một người thanh niên khác, thanh niên kia tên là Vương Kiên, mặc dù cũng chỉ là Hoàng giai đê phẩm linh căn, nhưng là cửa thứ hai đo đạo tâm hạng nhất.<br><br>Mộc Thanh Uyển cùng Vương Kiên, hắn cũng không sánh bằng.<br><br>Muốn đến tiếp sau tiến vào tông môn sau đạt được tốt phát triển, nhất định phải ổn định thứ ba vị trí, vậy sẽ phải thắng qua Lý An.<br><br>Giờ phút này gặp Lý An không chết, trong lòng của hắn ẩn ẩn không ổn.<br><br>. . .<br><br>Tiến vào Huyền Dương Tông tam trọng tuyển chọn, hai cửa trước theo thứ tự là đo linh căn, đo đạo tâm.<br><br>Có được "Hoàng "Giai hạ phẩm trở lên linh căn, mới có thể thông qua cửa thứ nhất.<br><br>Đo đạo tâm, thì cần muốn mầm Tiên đỉnh lấy vạn trọng áp lực leo núi, nhìn hỏi chi tâm phải chăng kiên định.<br><br>Hai cửa trước, Lý An biểu hiện được không tệ, vẫn luôn phía trước mười phần liệt!<br><br>Cửa thứ ba, thì là cần mầm Tiên đi thuần phục khác biệt "Tiên đạo linh khí", có thể thuần phục tiên đạo linh khí càng mạnh, về sau trong môn tiền đồ hiển nhiên liền càng xa lớn.<br><br>Cho nên, Lý An bằng vào mình không thuộc tính linh căn, mưu toan lựa chọn thuần phục Huyền Dương Tông khó khăn nhất Lôi đạo linh khí!<br><br>Nhưng cỗ thân thể này vốn là yếu ớt, từ nhỏ dinh dưỡng không đầy đủ, tại Lôi đạo linh khí xung kích phía dưới, một mệnh ô hô. . .<br><br>"Lý An, ngươi ngu rồi sao? Mau dậy đi a, lại không quá khứ liền không có cơ hội."<br><br>Hắn tự hỏi thời điểm, Vương Đại Trụ đã chạy tới, kéo lên một cái Lý An, nói: "Đi, ta mang theo ngươi cùng đi xông Hỏa linh quan!"<br><br>Lý An ngạc nhiên, Vương Đại Trụ rõ ràng đã nhanh thông quan, lại chạy về tới kéo mình?<br><br>"Đại trụ, ta không muốn đi. . ."<br><br>"Đừng nói nhảm, hai chúng ta nói qua cùng một chỗ tu đạo thành tiên, ta biết thân thể ngươi hư, ta cõng ngươi!"<br><br>Hắn một tay lấy gầy yếu Lý An vác ở trên bờ vai, lau lau mồ hôi trán liền muốn hướng phía Hỏa linh quan bên kia xông.<br><br>"Không. . ."<br><br>Lý An lại lập tức luống cuống, nói: "Đại trụ, ngươi đây không phải giúp ta, ngươi là hại ta!"<br><br>Vương Đại Trụ đều đã mang theo hắn chuẩn bị xông vào, nghe vậy, có chút khó hiểu, nói: "A?"<br><br>"Thả ta xuống."<br><br>Vương Đại Trụ bất đắc dĩ đem hắn buông xuống. <br><br>"Đại trụ, ta nói thật cho ngươi biết, ta linh căn đã bị hao tổn, lại xông một lần Hỏa linh quan, cho dù có ngươi giúp ta, ta cũng khẳng định không sống nổi. . . Cám ơn ngươi."<br><br>Kỳ thật, cho dù linh căn bị hao tổn, có ở kiếp trước kinh nghiệm tại, Lý An cũng còn có bảy thành cơ hội, thông qua linh quan.<br><br>Nhưng. . . Chỉ có bảy thành!<br><br>Người bình thường không có thất bại tiền vốn.<br><br>Mà lại, bây giờ người mang Dưỡng Mệnh Chú Tiên Quyết, Lý An càng là không cần thiết, đi mạo hiểm như vậy.<br><br>Nói xong, Lý An quay người, liền hướng phía không có linh khí cánh cửa kia chạy tới.<br><br>"An ca!"<br><br>Vương Đại Trụ khiếp sợ lớn tiếng la lên.<br><br>Những người khác thấy thế, cũng là một trận bóp cổ tay thở dài.<br><br>"Thế mà lựa chọn con đường này. . ."<br><br>"Kể từ đó, hai cửa trước hết thảy thành tích, đều hóa thành phao ảnh!"<br><br>"Thông qua không linh chi môn, cũng có thể tiến vào tông môn, nhưng chỉ có thể hành động. . . Tạp dịch."<br><br>Rất nhiều thanh âm vang lên.<br><br>Hiển nhiên, đối Lý An tới nói, đây là một cái xấu nhất kết cục.<br><br>Trong đám người, một cái một thân vàng nhạt khinh sam tươi đẹp nữ tử, giờ phút này cũng không nhịn được nhíu mày, quét Lý An bóng lưng một chút. . .<br><br>Lúc đầu, Lý An hai cửa trước, đều phía trước mười tên, còn lại là có chút trân quý không thuộc tính linh căn, cho nên nàng vẫn là lưu ý một chút, cảm thấy là mầm mống tốt, trong lòng đều đang tính toán, đến tiếp sau bái tại môn hạ vị trưởng lão nào thích hợp nhất. . .<br><br>Không nghĩ tới, xông Lôi Linh đại đạo thất bại, thế mà dọa phá hắn gan? Để hắn ngay cả thử một lần cái khác dũng khí cũng không có sao?<br><br>Cũng được.<br><br>Tiên đạo khó dò, loại người này, cũng là không kỳ quái.<br><br>Nàng không có lại chú ý.<br><br>Mà giữa sân, Vương Đại Trụ nhìn xem Lý An thông qua đầu kia không có đại đạo chi linh cửa, cắn răng nói:<br><br>"Lý An, về sau ta bảo kê ngươi!"<br><br>Nói xong, hắn một đầu đâm vào hỏa linh đại đạo!<br><br>. . .<br><br>(tấu chương xong)<br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+
+
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

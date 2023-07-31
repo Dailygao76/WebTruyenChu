@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thông tin Truyện</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link href="css/header_menu.css" rel="stylesheet">
+    <link href="third_page.css" rel="stylesheet">
+</head>
+<body>
+
+        <nav>
+            <ul class="nav">
+                <li>  
+                    <a href="index.html">  <i class="fa-solid fa-house fa-xl"></i> </a> 
+                  
+                </li>  
+                <li>  
+                    <a href="#">  <i class="fa-solid fa-bars"></i> Thể loại</a>
+                    <ul class="dropdown" id="type_dropdown" >
+                        <li><a href="#"  class="submenu">Tất cả</a></li>
+                        <li><a href="#"  class="submenu">Huyền Huyễn</a></li>  
+                        <li><a href="#"  class="submenu">Khoa Huyễn </a></li>
+                        <li><a href="#"  class="submenu">Võng Du</a></li>
+                        <li><a href="#"  class="submenu">Đồng nhân</a></li>
+                    </ul>
+                </li>  
+
+                <li><a href="#">Bảng xếp hạng</a> 
+                    <ul class="dropdown" >
+                        <li><a href="#"  class="submenu">Thịnh hành</a></li>
+                        <li><a href="#"  class="submenu">Đọc nhiều</a></li>
+                        <li><a href="#"  class="submenu">Tặng thưởng</a></li>
+                        <li><a href="#"  class="submenu">Đề cử</a></li>
+                        <li><a href="#"  class="submenu">Yêu thích</a></li>
+                        <li><a href="#"  class="submenu">Thảo luận</a></li>
+                       
+                    </ul>
+                </li> 
+                
+                <li class="search">
+                    <div>
+                        <form >
+                            <input type="text"
+                                placeholder="Tìm truyện"
+                                name="search">
+                        </form>
+                    </div>
+                </li>
+
+                <li><a href="#" class="menu"  >Đăng Truyện</a></li>  
+
+                <li><a href="#" class="menu" id="login">Đăng Nhập</a></li>
+
+                <li><a href="#" class="menu" id="register">Đăng Ký</a></li>  
+
+            </ul>
+        </nav>   
+      
+    <div class="modal_login hide">
+        <div class="form_login">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="modal__inner_login">
+                <div class="modal__header_login">
+                    <P>Đăng nhập</P>
+                </div>
+                <div class="modal__body_login">
+                    <div class="header_form_login">
+                        <p>Email</p>
+                        <a>Gửi lại email kích hoạt</a>
+                    </div>
+
+                    <input type="text" placeholder="Nhập email" name="email" required>
+                
+                    <div class="header_form_login">
+                        <p>Mật khẩu</p>
+                        <a>Quên mật khẩu ?</a>
+                    </div>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+<!-- 
+                    <input type="checkbox">Ghi nhớ mật khẩu -->
+                    <label class="container">Ghi nhớ mật khẩu
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                </div>
+                <div class="modal_footer_login">
+                    <button>Đăng nhập</button>
+                    <p>Bạn chưa có tài khoản? <a id="Reg">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_register hide">
+        <div class="form_register">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="modal__inner_register">
+                <div class="modal__header_register">
+                    <P>Đăng ký</P>
+                </div>
+                <div class="modal__body_register">
+                    <div class="header_form_register">
+                        <p>Email</p>
+                    </div>
+                    <input type="text" placeholder="Nhập email" name="email" required>
+                
+                    <div class="header_form_register">
+                        <p>Mật khẩu</p>
+                    </div>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+                    <div class="header_form_register">
+                        <p>Mật khẩu</p>
+                    </div>
+                    <input type="password" placeholder="Nhập lại mật khẩu" name="rpsw" required>
+                </div>
+                <div class="modal_footer_register">
+                    <button>Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="title_story">
+        <a class="image_story" href="#"><span><img src="img/hinh5.png"> </span></a>
+        <div class="infor_content">
+            <a class="Title_content">Trường Sinh Từ Tông Môn Tạp Dịch Bắt Đầu </a>
+            <a class="nameauthor_content"> Tác giả: Phi Tiên Ngư</a>
+        </div>
+    </div>
+    <main>
+        <div class="detail_content">
+            <div class="left-content"> 
+                <div class="header_content">
+                    <div class="infor_story">
+                        <ul>
+                            <li><a class="number">239</a><a>Chương</a></li>
+                            <li><a class="number">12</a><a>Chương/tuần</a></li>
+                            <li><a class="number">239k</a><a>Lượt đọc</a></li>
+                            <li><a class="number">615</a><a>Cất giữ</a></li>
+                        </ul>
+                    </div>
+ 
+                    <div class="rating_bar">
+                        <span class="fa fa-star checked" style="color: #ffeb0a;"></span>
+                        <span class="fa fa-star checked" style="color: #ffeb0a;"></span>
+                        <span class="fa fa-star checked" style="color: #ffeb0a;"></span>
+                        <span class="fa fa-star checked" style="color: #ffeb0a;"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="heading">4/5 (10 Đánh giá)</span>
+                    </div>
+
+
+                    <div class="button_story">
+                        <button class="coutinue-reading-button" onclick="window.location.href='fourth_page.html';"> <i class="fa-solid fa-glasses" style="color: #ffffff;"></i>Đọc tiếp</button>
+                        <button class="bookmark-button"><i class="fa-regular fa-bookmark"></i>Đánh dấu</button>
+                        <button class="nominated-button"><i class="fa-solid fa-heart" style="color: #ea1f1f;"></i>Đề cử</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <h3>Giới Thiệu</h3>
+                <div class="main_content_right"> 
+                    <p>Xuyên qua đến tu tiên thế giới, một đời trước giới hạn trong thiên tư, đạo tâm không kiên, dừng bước Kết Đan.
+                    <br>
+                    <br>
+                    Sống lại một đời, Lý An tu hành Dưỡng Mệnh Chú Tiên Quyết, vững vàng phát dục, cẩu đạo làm đầu, rốt cục xông phá Nguyên Anh gông cùm xiềng xích... . . .
+                    <br>
+                    <br>
+                    Quần hùng tranh bá cuối cùng kết thúc, thiên kiêu tranh giành tận tàn lụi, chìm nổi ở giữa phía sau màn ai lạc tử, ai vì cờ.
+                    <br>
+                    <br>
+                    Chỉ có sống đến cuối cùng, duyệt tận thương hải tang điền, phương xưng trường sinh Chân Tiên...
+                    <br>
+                    <br>
+                    Vững vàng phát dục + cẩu + phàm nhân lưu.
+                    <br>
+                    <br>
+                    PS: Truyện cùng tác giả: Ta Thật Không Phải Cái Thế Cao Nhân</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <hr>
+
+    
+    <!-- <footer>
+        <div class="footer_content">
+            <div class="title_footer">
+                <p>
+                    Trang web đọc truyện là một nền tảng trực tuyến hoàn toàn miễn phí, 
+                    nơi bạn có thể khám phá những câu chuyện tuyệt vời từ mọi thể loại. 
+                    bạn sẽ tìm thấy đủ mọi thể loại để đáp ứng sở thích đọc truyện của mình. 
+                </p>
+                <a href="">Điều khoản dịch vụ</a>
+                <a href="">Chính sách bảo mật</a>
+                <a href="">Về bản quyền</a>
+                <a href="">Hướng dẫn sử dụng</a>
+            </div>
+        </div>
+    </footer> -->
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+</body>
+<script src="app.js"></script>
+</html>

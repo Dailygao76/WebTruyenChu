@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+
+        <nav>
+            <ul class="nav">
+                <li>  
+                    <a href="index.html">  <i class="fa-solid fa-house fa-xl"></i> </a> 
+                </li>  
+                <li>  
+                    <a href="#">  <i class="fa-solid fa-bars"></i> Thể loại</a>
+                    <ul class="dropdown" id="type_dropdown" >
+                        <li><a href="#"  class="submenu">Tất cả</a></li>
+                        <li><a href="#"  class="submenu">Huyền Huyễn</a></li>  
+                        <li><a href="#"  class="submenu">Khoa Huyễn </a></li>
+                        <li><a href="#"  class="submenu">Võng Du</a></li>
+                        <li><a href="#"  class="submenu">Đồng nhân</a></li>
+                    </ul>
+                </li>  
+
+                <li><a href="#">Bảng xếp hạng</a> 
+                    <ul class="dropdown" >
+                        <li><a href="#"  class="submenu">Thịnh hành</a></li>
+                        <li><a href="#"  class="submenu">Đọc nhiều</a></li>
+                        <li><a href="#"  class="submenu">Tặng thưởng</a></li>
+                        <li><a href="#"  class="submenu">Đề cử</a></li>
+                        <li><a href="#"  class="submenu">Yêu thích</a></li>
+                        <li><a href="#"  class="submenu">Thảo luận</a></li>
+                       
+                    </ul>
+                </li> 
+                
+                <li class="search">
+                    <div>
+                        <form >
+                            <input type="text"
+                                placeholder="Tìm truyện"
+                                name="search">
+                        </form>
+                    </div>
+                </li>
+
+                <li><a href="#" class="menu"  >Đăng Truyện</a></li>  
+
+                <li><a href="#" class="menu" id="login">Đăng Nhập</a></li>
+
+                <li><a href="#" class="menu" id="register">Đăng Ký</a></li>  
+
+            </ul>
+        </nav>   
+      
+    <div class="modal_login hide">
+        <div class="form_login">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="modal__inner_login">
+                <div class="modal__header_login">
+                    <P>Đăng nhập</P>
+                </div>
+                <div class="modal__body_login">
+                    <div class="header_form_login">
+                        <p>Email</p>
+                        <a>Gửi lại email kích hoạt</a>
+                    </div>
+
+                    <input type="text" placeholder="Nhập email" name="email" required>
+                
+                    <div class="header_form_login">
+                        <p>Mật khẩu</p>
+                        <a>Quên mật khẩu ?</a>
+                    </div>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+<!-- 
+                    <input type="checkbox">Ghi nhớ mật khẩu -->
+                    <label class="container">Ghi nhớ mật khẩu
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                </div>
+                <div class="modal_footer_login">
+                    <button>Đăng nhập</button>
+                    <p>Bạn chưa có tài khoản? <a id="Reg">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_register hide">
+        <div class="form_register">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="modal__inner_register">
+                <div class="modal__header_register">
+                    <P>Đăng ký</P>
+                </div>
+                <div class="modal__body_register">
+                    <div class="header_form_register">
+                        <p>Email</p>
+                    </div>
+                    <input type="text" placeholder="Nhập email" name="email" required>
+                
+                    <div class="header_form_register">
+                        <p>Mật khẩu</p>
+                    </div>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+                    <div class="header_form_register">
+                        <p>Mật khẩu</p>
+                    </div>
+                    <input type="password" placeholder="Nhập lại mật khẩu" name="rpsw" required>
+                </div>
+                <div class="modal_footer_register">
+                    <button>Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <a class="banner" href="#"><span></span></a>
+
+    <main>
+        <div class="page_content1"> 
+            <div class="left-content">
+                <div class="actionbar_content">
+                    <h2 class="main-content-header">Đề cử</h2>
+                    <a class="all_content" href="second_page.html">Xem tất cả</a>
+                </div>
+                <div class="col">
+                    <div class="row"  href="third_page.html">
+
+                        <a class="move_page" href="third_page.html">
+                            <img src="img/300.jpg" alt="">
+                        </a>
+                        
+                            <div class="media">
+                                <a class="header_move_page" href="third_page.html">
+                                    <h2>Quang âm chi ngoại</h2>
+                                </a>
+                              
+                                    <div class="lm-item1">
+                                        Thiên địa là vạn vật chúng sinh khách xá, quang âm là từ xưa tới nay khách qua đường.Tử sinh
+                                        khác biệt, thật giống như mộng cùng tỉnh khác biệt, xôn xao biến hóa, không thể cật vấn.Như vậy
+                                        siêu việt sinh tử, đã vượt ra thiên địa, tại quang âm bên ngoài , chờ đợi chúng ta là cái gì?
+                                    </div>
+                               
+                                <div class="lm-item2">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>Nhĩ Căn</p>
+                                </div>
+                            </div>
+                       
+                    </div>
+                    <div class="row">
+                        <a class="move_page" href="third_page.html">
+                            <img src="img/hinh2.png" alt="">
+                        </a>
+                        <div class="media">
+                            <a class="header_move_page" href="third_page.html">
+                                <h2>Điệu Thấp Tại Tu Tiên Giới</h2>
+                            </a>
+                              
+                            <div class="lm-item1">
+                                Xuyên qua tu tiên thế giới, làm một cái điệu thấp tu tiên người!
+                            </div>
+                            <div class="lm-item2">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Siêu Hỉ Hoan Cật Thiêu Khảo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="col">
+                    <div class="row">
+
+                        <a class="move_page" href="third_page.html">
+                            <img src="img/hinh3.png" alt="">
+                        </a>
+                        <div class="media">
+                            <a class="header_move_page" href="third_page.html">
+                                <h2>Đệ Tử Của Ta Tất Cả Đều Là Đại Đế Chi Tư</h2>
+                            </a>
+                            <div class="lm-item1">
+                                Mọi người đều biết, Nam Vực bên trong có một cái tuyệt đối không thể trêu thế lực, Thảo Đường.
+                                Trong đó đại đệ tử, là Nam Vực Thanh Vân Kiếm thánh, kiếm đạo thông thần.
+                                Nhị đệ tử, vạn cổ Nữ Đế, thống lĩnh một thời đại.
+                                Tam đệ tử, đương thời đại nho, Văn Khúc tinh hạ phàm.
+                                Tứ đệ tử, Ma Thần chuyển thế, trấn áp Cửu U.
+                            </div>
+                            <div class="lm-item2">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Biệt Nhượng Ngã Thông Tiêu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a class="move_page" href="third_page.html">
+                            <img src="img/hinh4.png" alt="">
+                        </a>
+                        <div class="media">
+
+                            <a class="header_move_page" href="third_page.html">
+                                <h2>Các Sư Đệ Đều Là Đại Lão, Vậy Ta Chỉ Có Thể Bật Hack</h2>
+                            </a>
+
+                            <div class="lm-item1">
+                                Nhị sư đệ là vị diện chi tử Tam sư đệ là người trùng sinh Tứ sư đệ là thượng cổ Kiếm Tiên chuyển thế
+                                Tiểu sư muội là tương lai yêu tộc Nữ Đế Từ trên xuống dưới đều là ẩn tàng đại lão!
+                                Thân là Đại sư huynh Âu Dương, miệng méo cười một tiếng vậy ta chỉ có thể bật hack!
+                            </div>
+                            <div class="lm-item2">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Thành Nam Hữu Vũ Lạc Thành Tây</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="col">
+                    <div class="row">
+                        <a class="move_page" href="third_page.html">
+                            <img src="img/hinh5.png" alt="">
+                        </a>
+                        <div class="media">
+
+                            <a class="header_move_page" href="third_page.html">
+                                <h2>Ta, Đao Kiếm Song Tuyệt, Các Ngươi Gọi Ta Mãng Kim Cương?</h2>
+                            </a>
+
+                            <div class="lm-item1">
+                                【 rút thưởng + vô địch + xấu bụng + thăng cấp + sát phạt quả đoán 】 
+                                Lý Tín mang lấy xuyên qua trước khắc kim trò chơi đại võ hiệp rút thưởng bàn xoay lớn xuyên qua dị thế giới, thành vì Hắc Phong trại trại chủ. Khắc kim rút ra vô số thần công, thần binh lợi khí.
+
+                            </div>
+                            <div class="lm-item2">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Tưởng Thảng Bình Đương Hàm Ngư A</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <a class="move_page" href="third_page.html">
+                            <img src="img/hinh6.png" alt="">
+                        </a>
+
+                        <div class="media">
+
+                            <a class="header_move_page" href="third_page.html">
+                                <h2>Ta Một Con Rắn, Dạy Dỗ Một Đám Ma Đầu Rất Hợp Lý Đi</h2>
+                            </a>    
+
+                            <div class="lm-item1">
+                                Chu Cửu Âm xuyên qua thành một đầu ăn tươi nuốt sống rắn, bắt đầu liền trường sinh vạn cổ, làm sao bị vĩnh thế trấn áp Bất Chu sơn phía dưới.
+                                May mà mở ra sư đồ trả về hệ thống. Đồ đệ tu vi, có thể vạn lần trả lại!
+                                Vì tự do, Chu Cửu Âm bắt đầu điên cuồng thu đồ đệ.    
+                            </div>
+                            <div class="lm-item2">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Thính Lãng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="col">
+                    <div class="row">
+                        <a class="move_page" href="third_page.html">
+                            <img src="img/hinh7.png" alt="">
+                        </a>
+                        <div class="media">
+
+                            <a class="header_move_page" href="third_page.html">
+                                <h2>Cái Này Phó Bản Không Khoa Học</h2>
+                            </a>
+                                
+                            <div class="lm-item1">
+                                Cái này phó bản quá nguy hiểm.
+                                Lam Tinh bị phân loại làm cấp độ F phó bản, cung cấp cái khác sinh linh ngao du, vui đùa, hoàn thành nhiệm vụ đạt được ban thưởng.
+                                Lâm Phàm biểu thị ta chính là Lam Tinh thổ dân, các ngươi kẻ ngoại lai quá càn rỡ.
+                                Rất đáng yêu yêu Cẩu Đầu Nương: Ô ô ô, khi ta tới thật tốt, lúc trở về bị lột sạch, cái này phó bản không thích hợp.  
+                            </div>
+                            <div class="lm-item2">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Tân Phong</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a class="move_page" href="third_page.html">
+                            <img src="img/hinh8.png" alt="">
+                        </a>
+                        <div class="media">
+
+                            <a class="header_move_page" href="third_page.html">
+                                <h2>Ở Trong Game Nhặt Lão Bà Đúng Là Nữ Ma Đầu</h2>
+                            </a>
+
+                            <div class="lm-item1">
+                                Thế giới trò chơi "Huyền Doanh đại lục" bởi vì không biết trục trặc cưỡng chế đá ra khỏi 
+                                toàn bộ Hải Lan tinh người chơi, cưỡng chế đóng server thời điểm, 
+                                duy chỉ có "Người chơi" Tống Diệp bị còn sót lại, trở thành Huyền Doanh đại lục duy nhất người chơi, hơn nữa còn bị cấm túc ở tân thủ thôn.
+                            </div>
+                            <div class="lm-item2">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Mãi Nhục Uy Đản Hoàng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="actionbar_content">
+                    <h2 class="main-content-header">Đang đọc</h2>
+                    <a class="all_content" href="#">Xem tất cả</a>
+                </div>
+                <ul class="coutinue-reading">
+                    <li>
+                        <div class="rc-media-wrapper">
+                            <img src="img/300.jpg" alt="">
+                            <div class="rc-media">
+                                <h2 class="rc-name">Quang âm chi ngoại</h2>
+                                <h2 class="page-readed">Đã đọc 1000/1000</h2>
+                            </div>
+                            <a class="cr-link" href="#">Đọc tiếp</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rc-media-wrapper">
+                            <img src="img/hinh2.png" alt="">
+                            <div class="rc-media">
+                                <h2 class="rc-name">Điệu Thấp Tại Tu Tiên Giới</h2>
+                                <h2 class="page-readed">Đã đọc 20/1000</h2>
+                            </div>
+                            <a class="cr-link" href="#">Đọc tiếp</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rc-media-wrapper">
+                            <img src="img/hinh3.png" alt="">
+                            <div class="rc-media">
+                                <h2 class="rc-name">Đệ Tử Của Ta Tất Cả Đều Là Đại Đế Chi Tư</h2>
+                                <h2 class="page-readed">Đã đọc 100/1000</h2>
+                            </div>
+                            <a class="cr-link" href="#">Đọc tiếp</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rc-media-wrapper">
+                            <img src="img/hinh6.png" alt="">
+                            <div class="rc-media">
+                                <h2 class="rc-name">Ta Một Con Rắn, Dạy Dỗ Một Đám Ma Đầu Rất Hợp Lý Đi</h2>
+                                <h2 class="page-readed">Đã đọc 1000/1000</h2>
+                            </div>
+                            <a class="cr-link" href="#">Đọc tiếp</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rc-media-wrapper">
+                            <img src="img/hinh7.png" alt="">
+                            <div class="rc-media">
+                                <h2 class="rc-name">Cái Này Phó Bản Không Khoa Học</h2>
+                                <h2 class="page-readed">Đã đọc 1000/1000</h2>
+                            </div>
+                            <a class="cr-link" href="#">Đọc tiếp</a>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+                <h2 class="main-content-header">Thông báo</h2>
+                <ul class="notify">
+                    <li>
+                        <h2>Thông báo 1</h2>
+                    </li>
+                    <li>
+                        <h2>Thông báo 2</h2>
+                    </li>
+                    <li>
+                        <h2>Thông báo 3</h2>
+                    </li>
+                    <li>
+                        <h2>Thông báo 4</h2>
+                    </li>
+                    <li>
+                        <h2>Thông báo 5</h2>
+                    </li>
+                    <li>
+                        <h2>Thông báo 6</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page_content2">
+            <div class="actionbar_content2">
+                <h2 class="main-content-header">Mới cập nhật</h2>
+                <a class="all_content2" href="#">Xem tất cả</a>
+            </div>
+            <hr>
+            <div class="update_content2">
+                <ul>
+                    <li class="content2_reading">
+                        <p class="category">Đồng nhân</p>
+                        <a class="namestory">Ta Đều Thành Phong Hào Đấu La, Hệ</a>
+                        <a class="chapter">Chương 48: Kẻ giết người Huyền Tử</a>
+                        <p class="author">Kiêu Ngạo Đích Du Tạc Cao</p>
+                        <p class="category">HacTamX</p>
+                        <p class="category">một phút trước</p>
+                    </li>
+                    <li class="content2_reading">
+                        <p class="category">Đô Thị</p>
+                        <a class="namestory">Trọng Sinh 1980: Bắt Đầu Cưới Tỷ Tỷ Khuê Mật</a>
+                        <a class="chapter">Chương 440:: Bán dê chia tiền!</a>
+                        <p class="author">Thương Nguyệt Ngạo Thiên</p>
+                        <p class="category">HacTamX</p>
+                        <p class="category">một phút trước</p>
+                    </li>
+                    <li class="content2_reading">
+                        <p class="category">Đô Thị</p>
+                        <a class="namestory">Cao Võ: Vạn Lần Cường Hóa, Ta Có Vô Số</a>
+                        <a class="chapter">Chương 120: Huyết Thú chủ lực quân đội, trên không trung loại nhân hình Huyết Thú</a>
+                        <p class="author">Bách Đao</p>
+                        <p class="category">Vô Ưu</p>
+                        <p class="category">6 phút trước</p>
+                    </li>
+                    <li class="content2_reading">
+                        <p class="category">Đồng nhân</p>
+                        <a class="namestory">Ta Đều Thành Phong Hào Đấu La, Hệ</a>
+                        <a class="chapter">Chương 48: Kẻ giết người Huyền Tử</a>
+                        <p class="author">Kiêu Ngạo Đích Du Tạc Cao</p>
+                        <p class="category">HacTamX</p>
+                        <p class="category">một phút trước</p>
+                    </li>
+                    <li class="content2_reading">
+                        <p class="category">Huyền Huyễn</p>
+                        <a class="namestory">Già Thiên Yêu Nữ Mời Giúp Ta Tu Hành</a>
+                        <a class="chapter">Chương 90: Kiêm tu linh bảo Luân Hải thiên</a>
+                        <p class="author">Nguyễn Như Ý</p>
+                        <p class="category">HacTamX</p>
+                        <p class="category">7 phút trước</p>
+                    </li>
+                    <li class="content2_reading">
+                        <p class="category">Đồng nhân</p>
+                        <a class="namestory">Ta Đều Thành Phong Hào Đấu La, Hệ</a>
+                        <a class="chapter">Chương 48: Kẻ giết người Huyền Tử</a>
+                        <p class="author">Kiêu Ngạo Đích Du Tạc Cao</p>
+                        <p class="category">HacTamX</p>
+                        <p class="category">một phút trước</p>
+                    </li>
+                    <li class="content2_reading">
+                        <p class="category">Kiếm Hiệp</p>
+                        <a class="namestory">Võ Hiệp: Bắt Đầu Thu Hoạch Được Một</a>
+                        <a class="chapter">Chương 73: Ngô nương tử cùng đỉnh bên trong</a>
+                        <p class="author">Lạc Phách Đích Tiểu Thuần Khiết</p>
+                        <p class="category">Huyền Linh</p>
+                        <p class="category">13 phút trước</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+
+
+        <div class="page_content3">  
+
+            <div class="read_for_week">
+                <div class="content_header">Đọc nhiều tuần</div>
+                <div class="content3_body">
+                    <ul>
+                        <li class="content3_reading top1">
+  
+                            <h3>1</h3>
+                            <div class="content3_left">
+                                <p class="name_content3">Củi Mục Ta, Đột Nhiên Có Ức</p>
+                                
+                                <div class="timeread_content3">
+                                    <i class="fa-solid fa-glasses"></i>
+                                    <p>83,627</p>              
+                                </div>
+                                <div class="author_content3">
+                                    <i class="fa-solid fa-user-pen"></i>
+                                    <p>Mục Dương Sinh</p>
+                                </div>
+                                <div class="type_content3">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    <p>Huyền Huyễn</p>
+                                </div>
+                            </div>
+                            <img src="img\150.jpg">
+                           
+                        </li>
+
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>2</h3>
+                            <p class="name_content3">Toàn Dân Chuyển Chức: Tử Linh</p>
+                            <p>31,251</p>
+                        </li>
+
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>3</h3>
+                            <p class="name_content3">Từ Đại Thụ Bắt Đầu Tiến Hóa</p>
+                            <p>24,404</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>4</h3>
+                            <p class="name_content3">Từ Sơn Tặc Bắt Đầu Nạp Tiền</p>
+                            <p>22,462</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>5</h3>
+                            <p class="name_content3">Đế Bá</p>
+                            <p>21,755</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>6</h3>
+                            <p class="name_content3">Đan Đạo Tông Sư</p>
+                            <p>19,706</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>7</h3>
+                            <p class="name_content3">Vô Thượng Thần Đế</p>
+                            <p>17,235</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>8</h3>
+                            <p class="name_content3">Toàn Dân Chuyển Chức</p>
+                            <p>15,393</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>9</h3>
+                            <p class="name_content3">Bác Sĩ Tâm Lý Có Thể Đoán</p>
+                            <p>6141</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>10</h3>
+                            <p class="name_content3">Từ Trong Bụng Mẹ Đánh Dấu</p>
+                            <p>5843</p>
+                        </li>
+                       
+                      
+                    </ul>
+                </div>
+            </div>
+
+            <div class="trending_week">
+                <div class="content_header">Thịnh hành tuần</div>
+                <div class="content3_body">
+                    <ul>
+
+                        <li class="content3_reading top1">
+  
+                            <h3>1</h3>
+                            <div class="content3_left">
+                                <p class="name_content3">Đan Đạo Tông Sư</p>
+                                
+                                <div class="timeread_content3">
+                                    <i class="fa-solid fa-glasses"></i>
+                                    <p>19706</p>                                  
+                                </div>
+                                <div class="author_content3">
+                                    <i class="fa-solid fa-user-pen"></i>
+                                    <p>Chích Thị Tiểu Hà Mễ</p>
+                                </div>
+                                <div class="type_content3">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    <p>Huyền Huyễn</p>
+                                </div>
+                            </div>
+                            <img src="img\trend_week.jpg">
+                           
+                        </li>
+
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>2</h3>
+                            <p class="name_content3">Ta Ở Group Chat Mô Phỏng </p>
+                            <p>13791</p>
+                        </li>
+
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>3</h3>
+                            <p class="name_content3">Đầu Tư Thiên Mệnh Tộc Nhân,</p>
+                            <p>8802</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>4</h3>
+                            <p class="name_content3">Vừa Tốt Nghiệp, Có Cái Thần</p>
+                            <p>8145</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>5</h3>
+                            <p class="name_content3">Bác Sĩ Tâm Lý Có Thể Đoán</p>
+                            <p>6141</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>6</h3>
+                            <p class="name_content3">Từ Trong Bụng Mẹ Đánh Dấu, </p>
+                            <p>5843</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>7</h3>
+                            <p class="name_content3">Trấn Thủ Tàng Kinh Các </p>
+                            <p>5537</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>8</h3>
+                            <p class="name_content3">Thần Quỷ Thế Giới: Ta Dựa </p>
+                            <p>5518</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>9</h3>
+                            <p class="name_content3">Võ Hiệp: Từ Mãn Cấp Thần </p>
+                            <p>5080</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>10</h3>
+                            <p class="name_content3">Kiêm Chức Nghệ Thuật Gia</p>
+                            <p>4505</p>
+                        </li>
+                       
+                      
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nominated_week">
+                <div class="content_header">Đề cử tuần</div>
+                <div class="content3_body">
+                    <ul>
+
+                        <li class="content3_reading top1">
+  
+                            <h3>1</h3>
+                            <div class="content3_left">
+                                <p class="name_content3">Quang Âm Chi Ngoại</p>
+                                
+                                <div class="timeread_content3">
+                                    <i class="fa-solid fa-glasses"></i>
+                                    <p>133</p>                                  
+                                </div>
+                                <div class="author_content3">
+                                    <i class="fa-solid fa-user-pen"></i>
+                                    <p>Nhĩ Căn</p>
+                                </div>
+                                <div class="type_content3">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    <p>Tiên hiệp</p>
+                                </div>
+                            </div>
+                            <img src="img\300.jpg">
+                           
+                        </li>
+
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>2</h3>
+                            <p class="name_content3">Xích Tâm Tuần Thiên</p>
+                            <p>125</p>
+                        </li>
+
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>3</h3>
+                            <p class="name_content3">Cẩu Thả Tại Nữ Ma Đầu Bên Người </p>
+                            <p>93</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>4</h3>
+                            <p class="name_content3">Vừa Thành Tiên Thần, Con Cháu Cầu</p>
+                            <p>82</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>5</h3>
+                            <p class="name_content3">Ta Có Một Thân Bị Động Kỹ</p>
+                            <p>65</p>
+                        </li>
+                        <hr class="strike">
+
+                        <li class="content3_reading">
+                            <h3>6</h3>
+                            <p class="name_content3">Thanh Liên Chi Đỉnh</p>
+                            <p>52</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>7</h3>
+                            <p class="name_content3">Vạn Cổ Thần Đế</p>
+                            <p>48</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>8</h3>
+                            <p class="name_content3">Kiêm Chức Nghệ Thuật Gia</p>
+                            <p>46</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>9</h3>
+                            <p class="name_content3">Nhân Đạo Đại Thánh</p>
+                            <p>41</p>
+                        </li>
+                        <hr class="strike">
+                        <li class="content3_reading">
+                            <h3>10</h3>
+                            <p class="name_content3">Đế Bá</p>
+                            <p>36</p>
+                        </li>
+                       
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>      
+    </main>
+    <hr>
+    <footer>
+        <div class="footer_content">
+            <div class="title_footer">
+                <p>
+                    Trang web đọc truyện là một nền tảng trực tuyến hoàn toàn miễn phí, 
+                    nơi bạn có thể khám phá những câu chuyện tuyệt vời từ mọi thể loại. 
+                    bạn sẽ tìm thấy đủ mọi thể loại để đáp ứng sở thích đọc truyện của mình. 
+                </p>
+                <a href="">Điều khoản dịch vụ</a>
+                <a href="">Chính sách bảo mật</a>
+                <a href="">Về bản quyền</a>
+                <a href="">Hướng dẫn sử dụng</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    
+</body>
+<script src="app.js"></script>
+</html>
+

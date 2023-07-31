@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f7f5f0;
+}
+ hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top: 1px solid #eee;
+ }
+
+.title_story{
+    left: 20%;
+    margin: 30px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+}
+
+.Title_content{
+    margin-top: 20px;
+    width: 500px;
+    height: fit-content;
+    margin-left: 100px;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.Title_content:hover{
+    color: #845e00cb;
+}
+
+.image_story img{
+    width: 300px;
+    box-shadow: -5px 10px 20px 0px #989691;
+}
+
+.infor_content{
+    height: fit-content;
+}
+.infor_content a{
+    display: block;
+}
+.nameauthor_content{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 30px;
+    margin-left: 100px;
+}
+
+
+main {
+    width: 1200px;
+    position: relative;
+    margin-top: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 0px #ffffff;
+}
+
+/*Content ở trên*/
+.left-content{
+    padding: 20px;
+    display: flex;
+}
+.left-content img{
+    width: 210px;
+    height: 280px;
+}
+
+.header_content{
+    z-index: 2;
+    padding-left: 550px;
+}
+
+.infor_story{
+    margin-top: 0px;
+    display: flex;
+}
+.infor_story ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.infor_story li{
+    margin: 0px 30px 20px 0px;
+}
+.infor_story a{
+    display: block;
+    margin-top: 10px;
+}
+.number{
+    font-weight: 600;
+}
+.rating_bar{
+    padding-top: 10px;
+    align-items: center;
+}
+
+
+.button_story{
+    padding-top: 30px;
+}
+.coutinue-reading-button{
+    background-color: #bf2c24;
+    border-color: #bf2c24;
+    color: #fff;
+    padding: 8px 16px 8px 16px;
+    border-radius: 25px;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 600; 
+    margin-right: 16px;
+    border: 1px solid;
+}
+
+.button_story i{
+    padding: 5px
+}
+.coutinue-reading-button:hover{
+    background-color: #9f241e;
+    border-color:  #9f241e;
+}
+
+
+
+.bookmark-button{
+    color: #666;
+    border-color: #666;
+    padding: 8px 16px 8px 16px;
+    border-radius: 25px;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    margin-right: 16px;
+    border: 1px solid;
+    font-weight: 600;
+}
+.bookmark-button:hover {
+    background-color:  #666;
+    color: #fff;
+}
+.nominated-button{
+    color: #cc9e14;
+    border-color: #cc9e14;
+    padding: 8px 16px 8px 16px;
+    border-radius: 25px;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    margin-right: 16px;
+    border: 1px solid;
+    font-weight: 600;
+}
+.nominated-button:hover{
+    color: #b1810acb;
+}
+
+
+/*Content ở dưới*/
+.right-content{
+    display: block;
+}
+.right-content h3{
+    margin: 40px 40px 0px 40px;
+}
+.main_content_right{
+    margin: 20px 40px 40px 40px;
+    width: 600px;
+}
+.main_content_right p{
+    line-height: 1.5;
+    text-align: justify;
+}

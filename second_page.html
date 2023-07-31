@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link href="secondpage_css.css" rel="stylesheet">
+    <link href="css/header_menu.css" rel="stylesheet">
+    <title>Danh sách Truyện</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <ul class="nav">
+                <li>  
+                    <a href="index.html">  <i class="fa-solid fa-house fa-xl"></i> </a> 
+                  
+                </li>  
+                <li>  
+                    <a href="#">  <i class="fa-solid fa-bars"></i> Thể loại</a>
+                    <ul class="dropdown" id="type_dropdown" >
+                        <li><a href="#"  class="submenu">Tất cả</a></li>
+                        <li><a href="#"  class="submenu">Huyền Huyễn</a></li>  
+                        <li><a href="#"  class="submenu">Khoa Huyễn </a></li>
+                        <li><a href="#"  class="submenu">Võng Du</a></li>
+                        <li><a href="#"  class="submenu">Đồng nhân</a></li>
+                    </ul>
+                </li>  
+
+                <li><a href="#">Bảng xếp hạng</a> 
+                    <ul class="dropdown" >
+                        <li><a href="#"  class="submenu">Thịnh hành</a></li>
+                        <li><a href="#"  class="submenu">Đọc nhiều</a></li>
+                        <li><a href="#"  class="submenu">Tặng thưởng</a></li>
+                        <li><a href="#"  class="submenu">Đề cử</a></li>
+                        <li><a href="#"  class="submenu">Yêu thích</a></li>
+                        <li><a href="#"  class="submenu">Thảo luận</a></li>
+                       
+                    </ul>
+                </li> 
+                
+                <li class="search">
+                    <div>
+                        <form >
+                            <input type="text"
+                                placeholder="Tìm truyện"
+                                name="search">
+                        </form>
+                    </div>
+                </li>
+
+                <li><a href="#" class="menu"  >Đăng Truyện</a></li>  
+
+                <li><a href="#" class="menu" id="login">Đăng Nhập</a></li>
+
+                <li><a href="#" class="menu" id="register">Đăng Ký</a></li>  
+
+            </ul>
+        </nav>   
+    
+        <div class="modal_login hide">
+            <div class="form_login">
+                <i class="fa-solid fa-xmark"></i>
+                <div class="modal__inner_login">
+                    <div class="modal__header_login">
+                        <P>Đăng nhập</P>
+                    </div>
+                    <div class="modal__body_login">
+                        <div class="header_form_login">
+                            <p>Email</p>
+                            <a>Gửi lại email kích hoạt</a>
+                        </div>
+    
+                        <input type="text" placeholder="Nhập email" name="email" required>
+    
+                        <div class="header_form_login">
+                            <p>Mật khẩu</p>
+                            <a>Quên mật khẩu ?</a>
+                        </div>
+                        <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                        <!-- 
+                        <input type="checkbox">Ghi nhớ mật khẩu -->
+                        <label class="container">Ghi nhớ mật khẩu
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="modal_footer_login">
+                        <button>Đăng nhập</button>
+                        <p>Bạn chưa có tài khoản? <a id="Reg">Đăng ký ngay</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal_register hide">
+            <div class="form_register">
+                <i class="fa-solid fa-xmark"></i>
+                <div class="modal__inner_register">
+                    <div class="modal__header_register">
+                        <P>Đăng ký</P>
+                    </div>
+                    <div class="modal__body_register">
+                        <div class="header_form_register">
+                            <p>Email</p>
+                        </div>
+                        <input type="text" placeholder="Nhập email" name="email" required>
+    
+                        <div class="header_form_register">
+                            <p>Mật khẩu</p>
+                        </div>
+                        <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+    
+                        <div class="header_form_register">
+                            <p>Mật khẩu</p>
+                        </div>
+                        <input type="password" placeholder="Nhập lại mật khẩu" name="rpsw" required>
+                    </div>
+                    <div class="modal_footer_register">
+                        <button>Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="banner" href="#"><span></span></a>
+
+        <div class="MainContainer">
+            <div class="sub-nav">
+                <div class="sub-nav-paging">
+                    <a class="nav-pre-page" href="#">
+                        <i class="fa-solid fa-angle-left fa-xs"></i>
+                        <span>Trước</span>
+                    </a>
+                    <div class="number-paging">
+                        <a class="first-page" href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">...</a>
+                        <a class="last-page " href="#">100</a>
+                    </div>
+                    <a class="nav-next-page" href="#">
+                        <span>Sau</span>
+                        <i class="fas fa-angle-right fa-xs"></i>
+                    </a>
+                </div>
+                <div class="sub-nav-controls">
+                    <div class="controls-toggle">
+                        <i class="fas fa-cog fa-sm"></i>
+                    </div>
+                    <div class="filter-toggle">
+                        <i class="fas fa-filter fa-sm"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="main-container-body">
+                <div class="main-content-wrapper">
+                    <div class="main-content-controls-panel" style="display: none;">
+                        <div class="controls-panel-title">
+                            <h3>Cài đặt</h3>
+                            <div class="close-controls-panel">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="controls-panel-item-wrapper">
+                            <div class="controls-panel-item">
+                                <h3>Layout</h3>
+                                <div class="layout-options">
+                                    <a class="grid grid-normal fas fa-th" href=""></a>
+                                    <a class="grid grid-large fas fa-th-large" href=""></a>
+                                    <a class="list fas fa-th-list" href=""></a>
+                                </div>
+                            </div>
+                            <div class="controls-panel-item">
+                                <h3>Mở trong trang mới</h3>
+                                <div class="new-tab-options">
+                                    <a href="">Bật</a>
+                                    <a href="">Tắt</a>
+                                </div>
+                            </div>
+                            <div class="controls-panel-item">
+                                <h3>Thanh filter</h3>
+                                <div class="filter-options">
+                                    <a href="">Bình thường</a>
+                                    <a href="">Sticky</a>
+                                </div>
+                            </div>
+                            <div class="controls-panel-item">
+                                <h3>Độ trễ</h3>
+                                <div class="delay-options">
+                                    <a href="">0ms</a>
+                                    <a href="">500ms</a>
+                                    <a href="">1000ms</a>
+                                </div>
+                            </div>
+                            <div class="controls-panel-item">
+                                <h3>Số phần tử trong 1 trang</h3>
+                                <div class="items-options">
+                                    <a href="">10</a>
+                                    <a href="">30</a>
+                                    <a href="">50</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-content">
+                        <div class="item">
+                            <img src="img/300.jpg" alt="">
+                            <h3 class="name">Quang âm chi ngoại</h3>
+                            <h3 class="chapter">C 1000</h3>
+                            <div class="reader-recommend">
+                                <i class="fa-solid fa-clock"></i>
+                                <h3>1 giờ</h3>
+                                <i class="fa-solid fa-heart"></i>
+                                <h3>300</h3>
+                                <i class="fa-solid fa-eye"></i>
+                                <h3>7.2 K</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <h3>4.2</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/hinh2.png" alt="">
+                            <h3 class="name">Điệu Thấp Tại Tu Tiên Giới</h3>
+                            <h3 class="chapter">C 1000</h3>
+                            <div class="reader-recommend">
+                                <i class="fa-solid fa-clock"></i>
+                                <h3>1 giờ</h3>
+                                <i class="fa-solid fa-heart"></i>
+                                <h3>300</h3>
+                                <i class="fa-solid fa-eye"></i>
+                                <h3>7.2 K</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <h3>4.2</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/hinh3.png" alt="">
+                            <h3 class="name">Đệ Tử Của Ta Tất Cả Đều Là Đại Đế Chi Tư</h3>
+                            <h3 class="chapter">C 1000</h3>
+                            <div class="reader-recommend">
+                                <i class="fa-solid fa-clock"></i>
+                                <h3>1 giờ</h3>
+                                <i class="fa-solid fa-heart"></i>
+                                <h3>300</h3>
+                                <i class="fa-solid fa-eye"></i>
+                                <h3>7.2 K</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <h3>4.2</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/hinh4.png" alt="">
+                            <h3 class="name">Các Sư Đệ Đều Là Đại Lão, Vậy Ta Chỉ Có Thể Bật Hack</h3>
+                            <h3 class="chapter">C 1000</h3>
+                            <div class="reader-recommend">
+                                <i class="fa-solid fa-clock"></i>
+                                <h3>1 giờ</h3>
+                                <i class="fa-solid fa-heart"></i>
+                                <h3>300</h3>
+                                <i class="fa-solid fa-eye"></i>
+                                <h3>7.2 K</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <h3>4.2</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/hinh5.png" alt="">
+                            <h3 class="name">Ta, Đao Kiếm Song Tuyệt, Các Ngươi Gọi Ta Mãng Kim Cương?</h3>
+                            <h3 class="chapter">C 1000</h3>
+                            <div class="reader-recommend">
+                                <i class="fa-solid fa-clock"></i>
+                                <h3>1 giờ</h3>
+                                <i class="fa-solid fa-heart"></i>
+                                <h3>300</h3>
+                                <i class="fa-solid fa-eye"></i>
+                                <h3>7.2 K</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <h3>4.2</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/hinh6.png" alt="">
+                            <h3 class="name">Ta Một Con Rắn, Dạy Dỗ Một Đám Ma Đầu Rất Hợp Lý Đi</h3>
+                            <h3 class="chapter">C 1000</h3>
+                            <div class="reader-recommend">
+                                <i class="fa-solid fa-clock"></i>
+                                <h3>1 giờ</h3>
+                                <i class="fa-solid fa-heart"></i>
+                                <h3>300</h3>
+                                <i class="fa-solid fa-eye"></i>
+                                <h3>7.2 K</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <h3>4.2</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/hinh7.png" alt="">
+                            <h3 class="name">Cái Này Phó Bản Không Khoa Học</h3>
+                            <h3 class="chapter">C 1000</h3>
+                            <div class="reader-recommend">
+                                <i class="fa-solid fa-clock"></i>
+                                <h3>1 giờ</h3>
+                                <i class="fa-solid fa-heart"></i>
+                                <h3>300</h3>
+                                <i class="fa-solid fa-eye"></i>
+                                <h3>7.2 K</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <h3>4.2</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/hinh8.png" alt="">
+                            <h3 class="name">Ở Trong Game Nhặt Lão Bà Đúng Là Nữ Ma Đầu</h3>
+                            <h3 class="chapter">C 1000</h3>
+                            <div class="reader-recommend">
+                                <i class="fa-solid fa-clock"></i>
+                                <h3>1 giờ</h3>
+                                <i class="fa-solid fa-heart"></i>
+                                <h3>300</h3>
+                                <i class="fa-solid fa-eye"></i>
+                                <h3>7.2 K</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <h3>4.2</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-sidebar">
+                    <div class="filter-sidebar-title">
+                        <h3>Filter</h3>
+                        <div class="close-controls-panel">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="filter-sorting">
+                        <h3 class="title">Sắp xếp theo</h3>
+                        <h3 class="current-sorting title">Thời gian</h3>
+                        <div class="sorting-selection">
+                            <a href="#"><i class="fas fa-clock"></i></a>
+                            <a href="#"><i class="fas fa-sort-alpha-down"></i></a>
+                            <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="filter-search">
+                        <h3 class="title">Tìm kiếm</h3>
+                        
+                        <a href="#" class="filter-search-type">
+                            <span class="filter-search-type-title on">Title</span>
+                            <span class="divider">/</span>
+                            <span class="filter-search-type-creator off">Creator</span>
+                        </a>
+                        <input id="input-title-search" class="on" placeholder="Search titles...">
+                        <input id="input-creator-search" class="off" placeholder="Search creator...">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <div class="footer_content">
+            <div class="title_footer">
+                <p>
+                    Trang web đọc truyện là một nền tảng trực tuyến hoàn toàn miễn phí, 
+                    nơi bạn có thể khám phá những câu chuyện tuyệt vời từ mọi thể loại. 
+                    bạn sẽ tìm thấy đủ mọi thể loại để đáp ứng sở thích đọc truyện của mình. 
+                </p>
+                <a href="">Điều khoản dịch vụ</a>
+                <a href="">Chính sách bảo mật</a>
+                <a href="">Về bản quyền</a>
+                <a href="">Hướng dẫn sử dụng</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+</body>
+<script src="app.js"></script>
+</html>
