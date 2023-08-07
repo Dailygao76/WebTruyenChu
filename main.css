@@ -798,6 +798,46 @@ div.rc-media .page-readed {
     width: 2px;
 }
 
+
+
+
+.asm2{
+    display: flex;
+    justify-content: end;
+}
+.asm2 a{
+    text-align: center;
+    background-color: #dadada;
+    text-decoration: none;
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 15px;
+    color: black;
+}
+.asm2 a:hover{
+    background-color: #a17924;
+    color: white;
+    transition: 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Footer page*/
 
 .footer_content{
