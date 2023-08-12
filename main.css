@@ -30,10 +30,6 @@ body{
     visibility: visible;
 }
 
-
-nav{
-    display: block;
-}
 .nav{
     list-style-type: none;
     display: flex;
@@ -420,7 +416,6 @@ a.banner{
 .banner span {
     display: block;
     height: 100%;
-    /* background-image: url(img/1949f3100efc143acfa61f0bdc2731be.webp); */
     background-size: cover;
     animation-name: example;
     animation-duration: 30s;
@@ -428,11 +423,11 @@ a.banner{
 }
 
 @keyframes example {
-    0%   {background-image: url(img/1949f3100efc143acfa61f0bdc2731be.webp)}
-    25%  {background-image: url(img/c7821bf2a6293ac88f1ff94eeeb3835f.webp)}
-    50%  {background-image: url(img/d2bcdcdfae320e1b8d416f6be43ae490.webp)}
-    75%  {background-image: url(img/eeff2df80e38b475d6c4b6959e824cd4.webp)}
-    100% {background-image: url(img/1949f3100efc143acfa61f0bdc2731be.webp)}
+    0%   {background-image: url(img/banner1.jpg)}
+    25%  {background-image: url(img/banner2.jpg)}
+    50%  {background-image: url(img/banner3.jpg)}
+    75%  {background-image: url(img/banner4.jpg)}
+    100% {background-image: url(img/banner5.jpg)}
 }
 
 main {
@@ -452,7 +447,7 @@ main {
 
 .main-content-header {
     font-size: 20px;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
 }
 
 .col {
@@ -540,7 +535,7 @@ main {
 
 .coutinue-reading {
     list-style: none;
-    padding: 0px 15px;
+    padding: 0px 15px 7.3px 15px;
 }
 
 .coutinue-reading li {

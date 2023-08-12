@@ -1,0 +1,92 @@
+body{
+    background-color: #f7f5f0;
+    margin: 0;
+    padding: 0;
+}
+caption{
+    margin: 0px 30px 30px 30px;
+}
+
+#mucgia{
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid rgb(208, 208, 208);
+}
+.container_bill{    
+    width: 900px;
+    margin: 20px auto auto auto;
+    padding: 20px;
+    font-size: 1.2em;
+}
+table{
+    width: 100%;
+    height: fit-content;
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid #dadada;
+    padding:  6px;
+    text-align: center;
+}
+caption{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.soluong{
+    border: 1px solid black;
+}
+.hideqty-after{
+    opacity: 0.5; /* Điều chỉnh giá trị opacity tùy thích */
+    pointer-events: none; /* Ngăn các sự kiện click hoặc hover trên phần tử */
+}
+
+#mucgia{
+    font-size: 16px;
+}
+.sanpham{
+    border: 1px solid #dadada;
+    display: flex;
+    align-items: center;
+}
+.sanpham img{
+    width: 100px;
+    margin: 10px;
+}
+.tensanpham{
+    margin: 5px;
+}
+.soluong{
+    border: none;
+}
+
+.button_wrapper {
+    width: 100%;
+    text-align: right;
+}
+.button_wrapper button{
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: #dadada;
+  
+}
+.button_wrapper button:hover{
+    background-color: #a17924;
+    color: white;
+    transition: 0.5s ease;
+}
+
+main {
+    width: 1200px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 0.5rem;
+    background-color: #fff;  
+    
+}
