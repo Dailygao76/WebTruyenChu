@@ -1,0 +1,99 @@
+
+*{
+    font-family: 'Source Sans Pro';
+}
+body{
+    background-color: #f7f5f0;
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 1200px;
+    position: relative;
+    margin: 10px auto 10px auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 0.5rem;
+    background-color: #fff;   
+}
+.page_content1{
+    display: flex;
+}
+.actionbar_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px 0px 20px
+}
+
+.all_content i{
+    font-size: 25px;
+}
+.col {
+    display: flex;
+}
+
+.row {
+    display: block; 
+    padding: 8.5px;
+    margin: 10px;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+}
+.row img{
+    width: 200px;
+}
+.row:hover{
+    box-shadow: 0 10px 25px 0 #d7d4ce;
+}
+.row hr{
+    margin-bottom: 20px;
+}
+.tensanpham{
+    font-size: 16px;
+    font-weight: 600;
+}
+.tentacgia{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.money{
+   font-size: 18px;
+   color: #e3a216;
+}
+.price_pd{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.soluongban{
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+.button_wrapper {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+.button_wrapper a{
+    font-size: 14px;
+    border: 1px solid #d79a00cb;
+    padding: 7px;
+    color: #d79a00cb;
+    border-radius: 5px;
+}
+
+.button_wrapper a:hover{
+    background-color: #f7f5f0;
+   
+}
+.button_wrapper i{
+    font-size: 18px;
+}
+

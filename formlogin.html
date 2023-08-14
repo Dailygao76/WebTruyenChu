@@ -3,154 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link href="css/formlogin.css" rel="stylesheet">
     <title>Document</title>
-    <style>
-        *{
-            font-family: 'Source Sans Pro';
-        }
-        body{
-            background-color: #f7f5f0;
-        }
-        form{
-            font-size: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-        .container{
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px 0 #989691;
-            background-color: white;
-        }
-        .container h2{
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-        .container label,input{
-            display: block;
-        }
-        .radio_input{
-            text-align: center;
-            align-items: center;
-            position: relative;
-            display: flex; 
-            width: 429px;
-            height: 35px;
-            line-height: 35px;
-            border: 1px solid rgb(221, 221, 221);
-            margin: 5px 0px 10px 0px;
-            border-radius: 10px; 
-        }
-        .radio_input div{
-            display: flex;
-            margin-right: 5px;
-        }
-
-        .fav_input{
-            text-align: center;
-            align-items: center;
-            position: relative;
-            display: flex; 
-            width: 429px;
-            height: 35px;
-            line-height: 35px;
-            border: 1px solid rgb(221, 221, 221);
-            margin: 5px 0px 5px 0px;
-            border-radius: 10px;
-        }
-       
-        .fav_input div{
-            margin-right: 5px;
-            display: flex;
-        }
-        #username{
-            margin: 5px 0px 10px 0px;
-            border: 1px solid rgb(221, 221, 221);
-            border-radius: 10px;
-            width: 417px;
-            height: 30px;
-            padding-left: 10px;
-        }
-        #hoten{
-            margin: 5px 0px 10px 0px;
-            border: 1px solid rgb(221, 221, 221);
-            border-radius: 10px;
-            width: 417px;
-            height: 30px;
-            padding-left: 10px;
-        }
-        #email{
-            margin: 5px 0px 10px 0px;
-            border: 1px solid rgb(221, 221, 221);
-            border-radius: 10px;
-            width: 417px;
-            height: 30px;
-            padding-left: 10px;
-        }
-
-        .national_form{
-            margin: 5px 0px 10px 0px;
-            border-radius: 10px;
-            border: 1px solid rgb(221, 221, 221);
-
-        }
-
-        #national{
-            width: 430px;
-            height: 40px;
-            border-radius: 10px;
-            font-size: 16px;
-            border: 1px solid rgb(221, 221, 221);
-        }
-        .note_input{
-            margin: 5px 0px 10px 0px;
-        }
-
-        .note_input textarea{
-            border: 1px solid rgb(221, 221, 221);
-            border-radius: 10px;
-            padding: 5px 10px 5px 5px;
-        }
-        button{
-            border: none;
-            border-radius: 20px;
-            width: 100px;
-            height: 40px;
-            margin: 5px 0px 10px 0px;
-        }
-        .error-message{
-            color: red;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-    
-
-    </style>
-
-   
+ 
 </head>
 <body>
     <form>
         <div class="container">
             <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
 
-           
                 <label for="username">Tên đăng nhập</label>
                 <input type="text" id="username" name="username">
                 <div class="error-message" id="username-error"></div>
 
+                <label for="pass">Mật khẩu</label>
+                <input type="text" id="pass" name="pass">   
+                <div class="error-message" id="pass-error"></div>
          
                 <label for="hoten">Họ và tên</label>
                 <input type="text" id="hoten" name="hoten">   
                 <div class="error-message" id="hoten-error"></div>
-          
-
            
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email">
@@ -270,164 +144,10 @@
             <button id="btn-register">Đăng ký</button>
         </div>
     </form>
-
-
-    <script>
-        var Register = document.getElementById('btn-register');
-        const Username = document.getElementById('username');
-        const Hoten = document.getElementById('hoten');
-        const Email = document.getElementById('email');
-        const Note = document.querySelector('textarea');
-
-
-        function setError(element, message) {
-            const errorElement = element.nextElementSibling;
-            errorElement.textContent = message;
-            element.style.backgroundColor = 'yellow';
-        }
-
-        function clearError(element) {
-            const errorElement = element.nextElementSibling;
-            errorElement.textContent = '';
-            element.style.backgroundColor = 'white';
-        }
-
-        function validateEmail(email) {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailPattern.test(email);
-        }
-
-        function checkgender(){
-            var maleRadio = document.getElementById("gender_male");
-            var femaleRadio = document.getElementById("gender_female");
-            var Radio_input = document.getElementsByClassName('radio_input');
-            var isMaleChecked = maleRadio.checked;
-            var isFemaleChecked = femaleRadio.checked;
-
-            // Kiểm tra xem người dùng đã chọn một trong hai giới tính hay chưa
-            if (!isMaleChecked && !isFemaleChecked) {
-                Radio_input[0].style.backgroundColor = 'yellow'; // Đổi màu nền của phần tử có lớp "radio_input"
-                setError(Radio_input[0], 'Vui lòng chọn giới tính');
-                return false;
-            } else {
-                clearError(Radio_input[0]);
-            }
-        }
-
-        function checkhobby(){
-            var hobby = document.getElementsByClassName('fav_input');
-            var checkboxes = document.getElementsByClassName("fav");
-            var checkedCount = 0;
-
-            // Count the number of checked checkboxes
-            for (var i = 0; i < checkboxes.length; i++) {
-                if (checkboxes[i].checked) {
-                    checkedCount++;
-                }
-            }
-
-            // Check if exactly one checkbox is checked
-            if (checkedCount < 1) {
-                hobby[0].style.backgroundColor = 'yellow'; // Đổi màu nền của phần tử có lớp "radio_input"
-                setError(hobby[0], 'Sở thích chưa chọn');
-                return false;
-            }else{
-                clearError(hobby[0]);
-            }
-        }
-
-  
-       
-            var noteInput = document.getElementById('noteInput');
-            var noteError = document.getElementById('note-error');
-
-            function checkNoteLength() {
-                const maxLength = 200;
-                const noteValue = noteInput.value.trim();
-
-                if (noteValue.length > maxLength) {
-                    noteError.textContent = 'Ít hơn 200 ký tự: ghi chú';
-                    noteInput.style.backgroundColor = 'yellow';
-                    return false;
-                } else {
-                    noteError.textContent = '';
-                    noteInput.style.backgroundColor = 'white';
-                }
-            }
-            noteInput.addEventListener('input', checkNoteLength);
     
-
-        function nationality(){
-            
-            var nationalitySelect = document.getElementById("national");
-            var National_form = document.getElementsByClassName("national_form");
-            var selectedNationality = nationalitySelect.value;
-
-            // Check if the user has selected a valid nationality option
-            if (selectedNationality === "chonquoctich") {
-                nationalitySelect.style.backgroundColor =  'yellow'; 
-                setError(National_form[0], 'Quốc tịch chưa chọn');
-                return false;
-            }else{
-                nationalitySelect.style.backgroundColor =  'white'; 
-                clearError(National_form[0]);
-            }
-        }
-      
-        function checkValidate() {
-    
-            let isValid = true;
-
-            if (Username.value.trim() === '') {
-                setError(Username, 'Tên đăng nhập không được để trống');
-                isValid = false;
-            } else {
-                clearError(Username);
-            }
-
-            if (Hoten.value.trim() === '') {
-                setError(Hoten, 'Họ tên không được để trống');
-                isValid = false;
-            } else {
-                clearError(Hoten);
-            }
-
-            if (Email.value.trim() === '') {
-                setError(Email, 'Email không được để trống');
-                isValid = false;
-            } else if (!validateEmail(Email.value)) {
-                setError(Email, 'Email không đúng định dạng');
-                isValid = false;
-            } else {
-                clearError(Email);
-            }
-
-            if(checkgender() === false){
-                isValid = false;
-            }
-            if(checkhobby() === false){
-                isValid = false;
-            }
-            if(nationality() === false){
-                isValid = false;
-            }
-        
-            if(checkNoteLength() === false){
-                isValid = false;
-            }
-          
-
-            return isValid;
-        }
-
-        Register.addEventListener('click', function(event) {
-            event.preventDefault();
-            let isValid = checkValidate();
-
-            if (isValid) {
-                alert('Gửi đăng ký thành công');
-            }
-        });
-    </script>
+    <div class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
 </body>
+    <script src="js/formlogin.js"></script>
 </html>

@@ -1,0 +1,169 @@
+
+*{
+    font-family: 'Source Sans Pro';
+}
+body{
+    background-color: #f7f5f0;
+    margin: 0;
+    padding: 0;
+}
+form{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px 0 #989691;
+    background-color: white;
+    margin: 20px;
+}
+.container h2{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.container label,input{
+    display: block;
+}
+.radio_input{
+    text-align: center;
+    align-items: center;
+    position: relative;
+    display: flex; 
+    width: 429px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid rgb(221, 221, 221);
+    margin: 5px 0px 10px 0px;
+    border-radius: 10px; 
+}
+.radio_input div{
+    display: flex;
+    margin-right: 5px;
+}
+
+.fav_input{
+    text-align: center;
+    align-items: center;
+    position: relative;
+    display: flex; 
+    width: 429px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid rgb(221, 221, 221);
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
+}
+
+.fav_input div{
+    margin-right: 5px;
+    display: flex;
+}
+#username{
+    margin: 5px 0px 10px 0px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    width: 417px;
+    height: 30px;
+    padding-left: 10px;
+}
+#pass{
+    margin: 5px 0px 10px 0px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    width: 417px;
+    height: 30px;
+    padding-left: 10px;
+}
+#hoten{
+    margin: 5px 0px 10px 0px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    width: 417px;
+    height: 30px;
+    padding-left: 10px;
+}
+#email{
+    margin: 5px 0px 10px 0px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    width: 417px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.national_form{
+    margin: 5px 0px 10px 0px;
+    border-radius: 10px;
+    border: 1px solid rgb(221, 221, 221);
+
+}
+
+#national{
+    width: 430px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(221, 221, 221);
+}
+.note_input{
+    margin: 5px 0px 10px 0px;
+}
+
+.note_input textarea{
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    padding: 5px 10px 5px 5px;
+}
+button{
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    margin: 5px 0px 10px 0px;
+}
+button:hover{
+    background-color: #a17924;
+    color: white;
+    transition: 0.5s ease;
+}
+.error-message{
+    color: red;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.error-color{
+    background-color: #ffff89;
+}
+
+
+/*Back top*/
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #d79a00cb;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
