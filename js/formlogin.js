@@ -1,8 +1,9 @@
 
 var Register = document.getElementById('btn-register');
 const Username = document.getElementById('username');
-const Password = document.getElementById('pass');
-const Hoten = document.getElementById('hoten');
+const Password = document.getElementById('password');
+const Hoten = document.getElementById('fullname');
+const Phonenumber = document.getElementById('phone');
 const Email = document.getElementById('email');
 const Note = document.querySelector('textarea');
 
@@ -104,10 +105,53 @@ function nationality(){
         setError(National_form[0], 'Quốc tịch chưa chọn');
         return false;
     }else{
-        nationalitySelect.style.backgroundColor =  'white'; 
+        nationalitySelect.style.backgroundColor = 'white'; 
         clearError(National_form[0]);
     }
 }
+
+
+function myFunction() {
+    // Chuyển đổi giữa hiển thị và ẩn mật khẩu
+    if (Password.type === "password") {
+        Password.type = "text";
+    } else {
+        Password.type = "password";
+    }
+}
+
+
+function checkPassword(){
+    const passError = document.getElementById("pass-error");
+    const password = Password.value;
+
+    // Kiểm tra tính hợp lệ của mật khẩu
+    if (password.length < 8) {
+        passError.textContent = 'Mật khẩu phải có ít nhất 8 ký tự';
+        Password.classList.add("error-color");
+        return false;
+    } else if (!/[a-z]/.test(password)) {
+        passError.textContent = 'Mật khẩu cần ít nhất một chữ thường';
+        Password.classList.add("error-color");
+        return false;
+    } else if (!/[A-Z]/.test(password)) {
+        passError.textContent = 'Mật khẩu cần ít nhất một chữ hoa';
+        Password.classList.add("error-color");
+        return false;
+    } else if (!/\d/.test(password)) {
+        passError.textContent = 'Mật khẩu cần ít nhất một số';
+        Password.classList.add("error-color");
+        return false;
+    } else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\-]/.test(password)) {
+        passError.textContent = 'Mật khẩu cần ít nhất một ký tự đặc biệt';
+        Password.classList.add("error-color");
+        return false;
+    } else {
+        passError.textContent = ''; // Xóa thông báo lỗi nếu mật khẩu hợp lệ
+        clearError(Password);
+    }
+}
+
 
 function checkValidate() {
 
@@ -120,33 +164,39 @@ function checkValidate() {
         clearError(Username);
     }
 
-    const password = Password.value;
-    // Kiểm tra tính hợp lệ của mật khẩu
-    if (password.length < 8) {
-        setError(Password, 'Mật khẩu phải có ít nhất 8 ký tự');
-        isValid = false;
-    } else if (!/[a-z]/.test(password)) {
-        setError(Password, 'Mật khẩu cần ít nhất một chữ thường');
-        isValid = false;
-    } else if (!/[A-Z]/.test(password)) {
-        setError(Password, 'Mật khẩu cần ít nhất một chữ hoa');
-        isValid = false;
-    } else if (!/\d/.test(password)) {
-        setError(Password, 'Mật khẩu cần ít nhất một số');
-        isValid = false;
-    } else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\-]/.test(password)) {
-        setError(Password, 'Mật khẩu cần ít nhất một ký tự đặc biệt');
-        isValid = false;
-    } else {
-        clearError(Password);
-    }
-
+    // const password = Password.value;
+    // // Kiểm tra tính hợp lệ của mật khẩu
+    // if (password.length < 8) {
+    //     setError(Password, 'Mật khẩu phải có ít nhất 8 ký tự');
+    //     isValid = false;
+    // } else if (!/[a-z]/.test(password)) {
+    //     setError(Password, 'Mật khẩu cần ít nhất một chữ thường');
+    //     isValid = false;
+    // } else if (!/[A-Z]/.test(password)) {
+    //     setError(Password, 'Mật khẩu cần ít nhất một chữ hoa');
+    //     isValid = false;
+    // } else if (!/\d/.test(password)) {
+    //     setError(Password, 'Mật khẩu cần ít nhất một số');
+    //     isValid = false;
+    // } else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\-]/.test(password)) {
+    //     setError(Password, 'Mật khẩu cần ít nhất một ký tự đặc biệt');
+    //     isValid = false;
+    // } else {
+    //     clearError(Password);
+    // }
 
     if (Hoten.value.trim() === '') {
         setError(Hoten, 'Họ tên không được để trống');
         isValid = false;
     } else {
         clearError(Hoten);
+    }
+
+    if (Phonenumber.value.trim() === '') {
+        setError(Phonenumber, 'Số điện thoại không được để trống');
+        isValid = false;
+    } else {
+        clearError(Phonenumber);
     }
 
     if (Email.value.trim() === '') {
@@ -173,16 +223,21 @@ function checkValidate() {
         isValid = false;
     }
   
+    if(checkPassword() === false){
+        isValid = false;
+    }
 
     return isValid;
 }
 
+const form = document.querySelector("form");
 Register.addEventListener('click', function(event) {
     event.preventDefault();
     let isValid = checkValidate();
 
     if (isValid) {
         alert('Gửi đăng ký thành công');
+        form.submit(); 
     }
 });
 

@@ -59,11 +59,11 @@ caption{
     border: none;
 }
 
-.button_wrapper {
+.button_wrapper1 {
     width: 100%;
     text-align: right;
 }
-.button_wrapper button{
+.button_wrapper1 button{
     width: 200px;
     height: 40px;
     font-size: 18px;
@@ -73,8 +73,14 @@ caption{
     background-color: #dadada;
   
 }
-.button_wrapper button:hover{
+#button_buy:hover{
     background-color: #a17924;
+    color: white;
+    transition: 0.5s ease;
+}
+
+#button_del:hover{
+    background-color: red;
     color: white;
     transition: 0.5s ease;
 }
