@@ -185,13 +185,14 @@ function checkValidate() {
 
     return isValid;
 }
-
+const form = document.querySelector("form");
 Register.addEventListener('click', function(event) {
     event.preventDefault();
     let isValid = checkValidate();
 
     if (isValid) {
         alert('Gửi đăng ký thành công');
+        form.submit(); 
     }
 });
 
