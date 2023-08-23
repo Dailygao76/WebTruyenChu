@@ -1,8 +1,9 @@
 
 var Register = document.getElementById('btn-register');
 const Username = document.getElementById('username');
-const Password = document.getElementById('pass');
-const Hoten = document.getElementById('hoten');
+const Password = document.getElementById('password');
+const Hoten = document.getElementById('fullname');
+const Phonenumber = document.getElementById('phone');
 const Email = document.getElementById('email');
 const Note = document.querySelector('textarea');
 
@@ -147,6 +148,15 @@ function checkValidate() {
     } else {
         clearError(Hoten);
     }
+
+    if (Phonenumber.value.trim() === '') {
+        setError(Phonenumber, 'Số điện thoại không được để trống');
+        isValid = false;
+    } else {
+        clearError(Phonenumber);
+    }
+
+
 
     if (Email.value.trim() === '') {
         setError(Email, 'Email không được để trống');

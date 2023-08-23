@@ -74,7 +74,7 @@ form{
     height: 30px;
     padding-left: 10px;
 }
-#pass{
+#password{
     margin: 5px 0px 10px 0px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 10px;
@@ -82,7 +82,15 @@ form{
     height: 30px;
     padding-left: 10px;
 }
-#hoten{
+#fullname{
+    margin: 5px 0px 10px 0px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    width: 417px;
+    height: 30px;
+    padding-left: 10px;
+}
+#phone{
     margin: 5px 0px 10px 0px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 10px;
