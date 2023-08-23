@@ -7,7 +7,6 @@
     <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
     <link href="css/formlogin.css" rel="stylesheet">
     <title>Document</title>
- 
 </head>
 <body>
     <form action="http://localhost/webtruyen/connect.php" method="post" >
@@ -19,8 +18,13 @@
                 <div class="error-message" id="username-error"></div>
 
                 <label for="password">Mật khẩu</label>
-                <input type="text" id="password" name="password">   
+                <div class="form_pass">
+                    <input type="password" id="password" name="password">
+                    <input type="checkbox" id="eyes_onoff" onclick="myFunction()" >
+                </div>
                 <div class="error-message" id="pass-error"></div>
+             
+                
          
                 <label for="fullname">Họ và tên</label>
                 <input type="text" id="fullname" name="fullname">   
@@ -38,10 +42,10 @@
                 <label for="gender">Giới tính</label>
                 <div class="radio_input" id="gender_checked">
                     <div>
-                        <input type="radio" class="radio" id="gender_male"  name="gender">
+                        <input type="radio" class="radio" id="gender_male"  name="gender" value="male">
                         <label for="gender_male" class="custom-radio">Nam</label>
                     
-                        <input type="radio" class="radio" id="gender_female" name="gender">
+                        <input type="radio" class="radio" id="gender_female" name="gender" value="female">
                         <label for="gender_female" class="custom-radio">Nữ</label>
                     </div>
                 </div>
@@ -54,27 +58,27 @@
                 <label for="fav">Sở thích</label>
                 <div class="fav_input">
                     <div>
-                        <input type="checkbox" class="fav" id="reader">
+                        <input type="checkbox" class="fav" id="reader" name="hobby[]" value="reading">
                         <label for="reader" class="custom-fav">Đọc sách</label>
                     </div>
                 
                     <div>
-                        <input type="checkbox" class="fav" id="travel">
+                        <input type="checkbox" class="fav" id="travel" name="hobby[]" value="travel">
                         <label for="travel" class="custom-fav">Du lịch</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" class="fav" id="music">
+                        <input type="checkbox" class="fav" id="music" name="hobby[]" value="music">
                         <label for="music" class="custom-fav">Nhạc</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" class="fav" id="food">
+                        <input type="checkbox" class="fav" id="food" name="hobby[]" value="food">
                         <label for="food" class="custom-fav">Ẩm thực</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" class="fav" id="orther">
+                        <input type="checkbox" class="fav" id="orther" name="hobby[]" value="other">
                         <label for="orther" class="custom-fav">Khác</label>
                     </div>
                 </div>
@@ -140,9 +144,10 @@
 
                 <label for="note">Ghi chú</label>
                 <div class="note_input">
-                    <textarea id="noteInput" rows="7" cols="67" name="comment" form="usrform"></textarea>
+                    <textarea id="noteInput" rows="7" cols="67" name="comment"></textarea>
                 </div>
-                <div class="error-message" id="note-error"></div>                
+                <div class="error-message" id="note-error"></div>   
+                
 
             <button id="btn-register">Đăng ký</button>
         </div>
